@@ -87,7 +87,7 @@ export default function App() {
 
           <div class="order-1 w-full md:order-2 md:flex md:w-1/2 md:items-center md:justify-end">
             <img
-              src={isDark() ? "/logodark.svg" : "/logolight.svg"}
+              src={isDark() ? "logodark.svg" : "logolight.svg"}
               alt="xlcdev logo"
               class="mx-auto w-40 drop-shadow-2xl sm:w-56 md:w-80 lg:w-[420px]"
             />
@@ -125,7 +125,7 @@ export default function App() {
         </div>
 
         <img
-          src="/wave.svg"
+          src="wave.svg"
           alt=""
           class="absolute bottom-0 left-0 h-48 w-full object-cover sm:h-64 md:h-80"
         />
