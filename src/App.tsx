@@ -94,11 +94,7 @@ export default function App() {
           </div>
         </div>
 
-        <img
-          src="wave.svg"
-          alt=""
-          class="absolute bottom-0 left-0 h-48 w-full object-cover md:h-80"
-        />
+        <img src="wave.svg" alt="" class="h-48 w-full object-cover md:h-80" />
       </div>
     </>
   );
