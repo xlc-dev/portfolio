@@ -37,7 +37,7 @@ export default function App() {
     <>
       <div class="reveal-overlay pointer-events-none fixed inset-0 z-50 bg-[#1C1C2B]" />
 
-      <div class="relative min-h-screen overflow-hidden bg-[#1C1C2B] text-white">
+      <div class="relative overflow-hidden text-white">
         <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-4 py-6 md:flex-row md:px-8 md:py-24">
           <div class="order-2 w-full flex-1 text-center md:order-1 md:text-left">
             <h1 class="text-5xl leading-tight font-extrabold drop-shadow-2xl sm:text-6xl md:text-8xl lg:text-9xl">
