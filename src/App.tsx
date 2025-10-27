@@ -73,7 +73,7 @@ export default function App() {
 
             <div class="mt-8">
               <a
-                href="https://github.com"
+                href="https://github.com/xlc-dev"
                 aria-label="View my projects"
                 class="inline-block transform rounded-xl bg-gradient-to-br from-pink-400 to-orange-300 p-[3px] transition hover:scale-105">
                 <span
