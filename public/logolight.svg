@@ -1,17 +1,1 @@
-<svg width="315" height="298" viewBox="0 0 315 298" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_23_1161)">
-<path d="M311 101.407H253.102L123.298 232.42L82.9095 192.323H132.87L102.053 160.852H64.6996L136.605 89.2846V192.323L172.558 156.19V0L4 169.944L123.298 290L311 101.407Z" fill="#1C1C2B"/>
-</g>
-<defs>
-<filter id="filter0_d_23_1161" x="0" y="0" width="315" height="298" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_23_1161"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_23_1161" result="shape"/>
-</filter>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="315" height="298" fill="none"><g filter="url(#a)"><path fill="#1C1C2B" d="M311 101.407h-57.898L123.298 232.42l-40.389-40.097h49.961l-30.817-31.471H64.7l71.905-71.567v103.038l35.953-36.133V0L4 169.944 123.298 290 311 101.407Z"/></g><defs><filter id="a" width="315" height="298" x="0" y="0" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="4"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_23_1161"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_23_1161" result="shape"/></filter></defs></svg>
