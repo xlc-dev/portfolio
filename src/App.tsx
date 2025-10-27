@@ -70,7 +70,7 @@ export default function App() {
           </div>
         </div>
 
-        <div class="relative mx-auto max-w-6xl px-4 py-8 md:px-8">
+        <div class="relative mx-auto max-w-6xl px-4 md:px-8">
           <div class="mb-8">
             <p class="text-base text-white/70 sm:text-lg md:text-lg">
               Technologies & tools I work with:
@@ -97,7 +97,7 @@ export default function App() {
         <img
           src="wave.svg"
           alt=""
-          class="absolute bottom-0 left-0 h-48 w-full object-cover sm:h-56 md:h-80"
+          class="absolute bottom-0 left-0 h-48 w-full object-cover md:h-80"
         />
       </div>
     </>
