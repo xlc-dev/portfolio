@@ -16,7 +16,7 @@ import GoIcon from "~icons/catppuccin/go";
 import SolidJsIcon from "~icons/catppuccin/solid";
 
 export default function App() {
-  let carouselRef!: HTMLElement;
+  let carouselRef!: HTMLDivElement;
 
   const technologies = [
     { name: "TypeScript", icon: TypeScriptIcon },
