@@ -33,64 +33,106 @@ export default function App() {
     { name: "Linux", icon: LinuxIcon },
   ];
 
+  const projects = [
+    {
+      name: "Nova",
+      description:
+        "A full stack Golang web application framework to build robust and scalable web applications with ease.",
+      link: "https://xlc-dev.github.io/nova/",
+      image: "https://xlc-dev.github.io/nova/static/img/nova.png",
+    },
+    {
+      name: "Fssg",
+      description:
+        "fssg is a portable, dependency-free static site generator written entirely in POSIX shell and AWK.",
+      link: "https://xlc-dev.github.io/fssg/",
+      image: "https://xlc-dev.github.io/fssg/static/img/logo.png",
+    },
+  ];
+
   return (
     <>
       <div class="reveal-overlay pointer-events-none fixed inset-0 z-50 bg-[#1C1C2B]" />
 
-      <div class="relative overflow-hidden text-white">
-        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-4 py-6 md:flex-row md:px-8 md:py-24">
-          <div class="order-2 w-full flex-1 text-center md:order-1 md:text-left">
-            <h1 class="text-5xl leading-tight font-extrabold drop-shadow-2xl sm:text-6xl md:text-8xl lg:text-9xl">
+      <div class="relative flex h-screen flex-col overflow-hidden text-white">
+        <header class="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-4 py-8 md:flex-row md:px-8 md:py-12">
+          <div class="flex-1 text-center md:text-left">
+            <h1 class="text-5xl font-bold drop-shadow-2xl sm:text-6xl md:text-7xl lg:text-8xl">
               XLCDEV
             </h1>
-
-            <p class="mt-4 text-base font-medium text-white/90 sm:text-lg md:text-xl lg:text-2xl">
+            <p class="mt-4 text-sm text-white/90 sm:text-base md:text-lg lg:text-xl">
               ICT professional with a passion for technology, sharp analytical mind, and a drive to
               continuously learn and improve.
             </p>
-
-            <div class="mt-8">
-              <a
-                href="https://github.com/xlc-dev"
-                aria-label="View my projects"
-                class="inline-block transform rounded-xl bg-gradient-to-br from-pink-400 to-orange-300 p-[3px] transition hover:scale-105">
-                <span class="block rounded-lg bg-[#0f1117] px-8 py-2 text-base font-semibold text-white sm:px-14 sm:py-2.5 sm:text-lg">
-                  GitHub
-                </span>
-              </a>
-            </div>
+            <a
+              href="https://github.com/xlc-dev"
+              class="mt-4 inline-block rounded-xl bg-gradient-to-br from-pink-400 to-orange-300 p-[3px] transition hover:scale-105">
+              <span class="block rounded-lg bg-[#0f1117] px-8 py-2 text-sm font-semibold sm:px-14 sm:text-base">
+                GitHub
+              </span>
+            </a>
           </div>
+          <img
+            src="logodark.svg"
+            alt="xlcdev logo"
+            class="w-32 flex-1 drop-shadow-2xl sm:w-40 md:w-56 lg:w-72"
+          />
+        </header>
 
-          <div class="order-1 w-full md:order-2 md:flex md:w-1/2 md:items-center md:justify-end">
-            <img
-              src="logodark.svg"
-              alt="xlcdev logo"
-              class="mx-auto w-40 drop-shadow-2xl sm:w-56 md:w-80 lg:w-[420px]"
-            />
-          </div>
-        </div>
+        <div class="flex-1 overflow-y-auto px-4 md:px-8">
+          <div class="mx-auto max-w-6xl space-y-8">
+            <section>
+              <p class="mb-4 text-xs text-white/70 sm:text-sm md:text-base">
+                Technologies & tools I work with:
+              </p>
+              <div class="w-full overflow-hidden">
+                <div class="carousel-scroll flex gap-4 whitespace-nowrap">
+                  <For each={[...technologies, ...technologies]}>
+                    {(tech) => {
+                      const Icon = tech.icon;
+                      return (
+                        <div class="flex shrink-0 items-center gap-2 rounded-lg bg-white/10 px-4 py-2 text-xs font-semibold sm:text-sm">
+                          <Icon class="h-3 w-3 sm:h-4 sm:w-4" />
+                          <span class="hidden sm:inline">{tech.name}</span>
+                        </div>
+                      );
+                    }}
+                  </For>
+                </div>
+              </div>
+            </section>
 
-        <div class="relative mx-auto max-w-6xl px-4 md:px-8">
-          <div class="mb-8">
-            <p class="text-base text-white/70 sm:text-lg md:text-lg">
-              Technologies & tools I work with:
-            </p>
-          </div>
-
-          <div class="overflow-hidden">
-            <div class="carousel-scroll flex gap-2 whitespace-nowrap sm:gap-4">
-              <For each={[...technologies, ...technologies]}>
-                {(tech) => {
-                  const Icon = tech.icon;
-                  return (
-                    <div class="inline-flex shrink-0 items-center gap-2 rounded-lg bg-white/10 px-3 py-2 text-sm font-semibold text-white transition hover:bg-white/20 sm:px-6 sm:py-3 sm:text-base">
-                      <Icon class="h-4 w-4 sm:h-5 sm:w-5" />
-                      <span class="hidden sm:inline">{tech.name}</span>
-                    </div>
-                  );
-                }}
-              </For>
-            </div>
+            <section>
+              <p class="mb-4 text-xs text-white/70 sm:text-sm md:text-base">Featured Projects</p>
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <For each={projects}>
+                  {(project) => (
+                    <a
+                      href={project.link}
+                      class="group rounded-lg bg-white/10 p-4 transition hover:bg-white/20">
+                      <div class="flex items-start justify-between gap-4">
+                        <div class="flex-1">
+                          <h3 class="text-sm font-semibold group-hover:text-pink-300 sm:text-base">
+                            {project.name}
+                          </h3>
+                          <p class="mt-2 text-xs text-white/70 sm:text-sm">
+                            {project.description}
+                          </p>
+                          <span class="mt-4 inline-block text-xs text-pink-400">View →</span>
+                        </div>
+                        <div class="h-16 w-20 shrink-0 rounded">
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            class="h-full w-full object-contain"
+                          />
+                        </div>
+                      </div>
+                    </a>
+                  )}
+                </For>
+              </div>
+            </section>
           </div>
         </div>
 
