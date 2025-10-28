@@ -69,7 +69,7 @@ export default function App() {
 
       <div class="relative flex min-h-screen flex-col overflow-x-hidden text-white">
         <header class="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-4 py-8 md:flex-row md:px-8 md:py-12">
-          <img src="logodark.svg" alt="xlcdev logo" class="w-24 flex-1 sm:w-28 md:w-56 lg:w-72" />
+          <img src="logodark.svg" alt="xlcdev logo" class="w-24 sm:w-28 md:w-56 lg:w-72" />
           <div class="flex-1 text-center md:text-left">
             <h1 class="text-3xl font-bold sm:text-4xl md:text-7xl lg:text-8xl">XLCDEV</h1>
             <p class="mt-4 text-xs text-white/90 sm:text-sm md:text-lg lg:text-xl">
