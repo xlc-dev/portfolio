@@ -1,4 +1,4 @@
-import { For } from "solid-js";
+import { For, onMount } from "solid-js";
 
 import ReactIcon from "~icons/catppuccin/typescript-react";
 import SvelteIcon from "~icons/catppuccin/svelte";
@@ -16,6 +16,8 @@ import GoIcon from "~icons/catppuccin/go";
 import SolidJsIcon from "~icons/catppuccin/solid";
 
 export default function App() {
+  let carouselRef!: HTMLElement;
+
   const technologies = [
     { name: "TypeScript", icon: TypeScriptIcon },
     { name: "JavaScript", icon: JavaScriptIcon },
@@ -50,12 +52,28 @@ export default function App() {
     },
   ];
 
+  onMount(() => {
+    if (!carouselRef) return;
+    setTimeout(() => {
+      const scrollWidth = carouselRef.scrollWidth;
+      const clientWidth = carouselRef.clientWidth;
+      const translatePercent = (scrollWidth / 2 / clientWidth) * 100;
+
+      carouselRef.style.setProperty("--translate-percent", `-${translatePercent}%`);
+    }, 150);
+  });
+
   return (
     <>
       <div class="reveal-overlay pointer-events-none fixed inset-0 z-50 bg-[#1C1C2B]" />
 
-      <div class="relative flex h-screen flex-col overflow-hidden text-white">
+      <div class="relative flex min-h-screen flex-col overflow-x-hidden text-white">
         <header class="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 px-4 py-8 md:flex-row md:px-8 md:py-12">
+          <img
+            src="logodark.svg"
+            alt="xlcdev logo"
+            class="w-32 flex-1 drop-shadow-2xl sm:w-40 md:order-last md:w-56 lg:w-72"
+          />
           <div class="flex-1 text-center md:text-left">
             <h1 class="text-5xl font-bold drop-shadow-2xl sm:text-6xl md:text-7xl lg:text-8xl">
               XLCDEV
@@ -72,22 +90,17 @@ export default function App() {
               </span>
             </a>
           </div>
-          <img
-            src="logodark.svg"
-            alt="xlcdev logo"
-            class="w-32 flex-1 drop-shadow-2xl sm:w-40 md:w-56 lg:w-72"
-          />
         </header>
 
-        <div class="flex-1 overflow-y-auto px-4 md:px-8">
+        <div class="px-4 md:px-8">
           <div class="mx-auto max-w-6xl space-y-8">
             <section>
               <p class="mb-4 text-xs text-white/70 sm:text-sm md:text-base">
-                Technologies & tools I work with:
+                Technologies & tools I work with
               </p>
               <div class="w-full overflow-hidden">
-                <div class="carousel-scroll flex gap-4 whitespace-nowrap">
-                  <For each={[...technologies, ...technologies]}>
+                <div ref={carouselRef} class="carousel-scroll flex gap-4 whitespace-nowrap">
+                  <For each={Array(2).fill(technologies).flat()}>
                     {(tech) => {
                       const Icon = tech.icon;
                       return (
